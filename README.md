@@ -65,25 +65,35 @@ MODEL GRAPH:
 
 
 Program
-
-
-Output Waveform
-
-
-
+```
+Am=4;
+Ac=8;
+fm=294;
+fc=2940;
+fs=29400;
+B=3.3;
+t=0:1/fs:2/fm;
+m=Am*cos(2*3.14*fm*t);
+c=Ac*cos(2*3.14*fc*t);
+Efm=Ac*cos((2*3.14*fc*t)+B*sin(2*3.14*fm*t));
+subplot(3,1,1);
+plot(t,m);
+subplot(3,1,2);
+plot(t,c);
+subplot(3,1,3);
+plot(t,Efm);
+```
+Output Wavefor
+<img width="1920" height="1200" alt="exp4_wave" src="https://github.com/user-attachments/assets/06868eef-5d5b-46b2-bca5-b510f8bac6ee" />
 Tabulation
-
-
-
+![AC_exp4_tab](https://github.com/user-attachments/assets/3e91e392-e443-4e24-85e9-47ca5c54e2d5)
 Calculation
-
-
-
+![AC_exp4_cal](https://github.com/user-attachments/assets/6588555e-e884-4546-903b-a73bdcba3727)
 Frequency Deviation Practical = 
 
-Modulation Index Practical	= 
+Modulation Index Practical	= 3.4
 
-Modulation Index Theoretical	=
+Modulation Index Theoretical	= 3.3
 
 
 
